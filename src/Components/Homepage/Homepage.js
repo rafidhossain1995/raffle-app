@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react"
-import {useInput} from "../../../Util/CustomHook/useInput"
+import {useInput} from "../../Util/CustomHook/useInput"
 import {Link} from "react-router-dom"
 import cors from 'cors'
 import axios from 'axios'

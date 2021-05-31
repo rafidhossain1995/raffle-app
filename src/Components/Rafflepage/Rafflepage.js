@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react"
 import {useParams, Link} from "react-router-dom"
 // import {useInput} from "../../../Util/CustomHook"
 import axios from "axios"
+import Navbar from "../Navbar/Navbar"
 
 const Rafflepage = ()=>{
     const [raffle, setRaffle] = useState ([])
@@ -52,14 +53,16 @@ useEffect (()=>{
 const saveRaffleApplicants = async(e)=>{
     e.preventDefault()
     const newApplicants = {
-        firstName: firstName,
-        lastName: lastName,
+        firstname: firstName,
+        lastname: lastName,
         email: email,
         phone: phone
     }
     try{
         await axios.post(`https://cors-anywhere.herokuapp.com/https://raffle-fs-app.herokuapp.com/api/raffles/${id}/participants`,
         newApplicants)  
+        debugger
+        
     }catch(err){
         console.log(err)
     }
@@ -68,13 +71,7 @@ const saveRaffleApplicants = async(e)=>{
 
     return(
         <>
-        <div>
-            <Link to ={"/"}><button>All Raffles</button></Link>
-            <button>Register</button>
-            <Link to ={`/raffles/${id}/participants`}><button>Participants</button></Link>
-            <button>Pick A Winner</button>
-            
-        </div>
+        <Navbar/>
         <div>
             <h2>{raffle.name}</h2>
             <form onSubmit = {saveRaffleApplicants}>
@@ -116,7 +113,7 @@ const saveRaffleApplicants = async(e)=>{
                     name="Phone" 
                     placeholder="Phone Number"
                     // value={name}
-                    required/>
+                    />
                 </label>
                 <button type="submit">Register for Raffle</button>
             </form>

@@ -17,22 +17,29 @@ const Winner = ()=>{
     // if our get winner function returns a response of an object with information in it
     // then we wnat to se the display winner to true 
 
+    const isEmpty = (obj) => {
+        return Object.keys(obj).length === 0;
+    }
+
+
 useEffect(()=>{
     const getWinner = async()=>{
         try{
            let res = await axios.get(`https://cors-anywhere.herokuapp.com/https://raffle-fs-app.herokuapp.com/api/raffles/${id}/winner`)
-           if(isEmpty(res.data)){
-               setDisplayWinner(false)
-           }else{
-               setDisplayWinner(true)
-           }
            debugger
+           if(!isEmpty(res.data)){
+               setRaffleWinner(res.data)
+               setDisplayWinner(true)
+           }else{
+               window.alert("No Participants At The Moment")
+           }
+        
         }catch(err){
             console.log(err)
         }
     }
     getWinner()
-},[])
+},[displayWinner])
 
  useEffect(()=>{
     const getRaffle = async ()=>{
@@ -72,7 +79,7 @@ useEffect(()=>{
                 );
                 setRaffleWinner(res.data)
                 setDisplayWinner(true)
-                // debugger
+                debugger
         }catch(err){
             console.log(err)
         }
@@ -102,9 +109,7 @@ useEffect(()=>{
 //     return raffleWinner
 //  }
 
- const isEmpty = (obj) => {
-    return Object.keys(obj).length === 0;
-}
+ 
     return(
         
         <div>

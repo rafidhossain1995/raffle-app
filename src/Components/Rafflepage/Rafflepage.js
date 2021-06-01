@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react"
 import {useParams, Link} from "react-router-dom"
-// import {useInput} from "../../../Util/CustomHook"
 import axios from "axios"
 import Navbar from "../Navbar/Navbar"
+import "../Rafflepage/Raffle.css"
 
 const Rafflepage = ()=>{
     const [raffle, setRaffle] = useState ([])
@@ -12,6 +12,7 @@ const Rafflepage = ()=>{
     const [email, setEmail] = useState("")
     const params = useParams ("/raffle/:id")
     const {id} = params    
+
 
     const handlefirstName = (e)=>{
         e.preventDefault()
@@ -70,10 +71,11 @@ const saveRaffleApplicants = async(e)=>{
 
 
     return(
-        <>
+    <div className="raffle">
         <Navbar/>
         <div>
             <h2>{raffle.name}</h2>
+            <h3>Fill out Information To Be Considered For A Prize!</h3>
             <form onSubmit = {saveRaffleApplicants}>
             
                 <label>
@@ -118,7 +120,7 @@ const saveRaffleApplicants = async(e)=>{
                 <button type="submit">Register for Raffle</button>
             </form>
         </div>
-        </>
+    </div>
     )
 }
     

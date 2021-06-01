@@ -1,70 +1,42 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Installation and Setup Instructions
 
-## Available Scripts
 
-In the project directory, you can run:
+Clone down this repository. You will need node and npm installed globally on your machine.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Clone the repo in your terminal and type git clone URL
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+After, you should replace the URL with the url you copied
 
-### `npm test`
+This will copy all the files from this repo down to your computer
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In your terminal, cd into the file you just created
 
-### `npm run build`
+Type npm install to install all dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Open the code with your desired coding platform
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Last, but not least, type npm start to run the app locally.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+# Project Overview
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This project was an application that allows a user to create a raffle and then allow other users to add themselves as participants to the raffle. The owner of the raffle sets up a secret key that they will later use to identify the winner of the raffle. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#  Application Specifications:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+###  Users Are Able To:
+- Create Raffles
+- List All Raffles
+- Add Particular Users To Raffles
+- Draw A Winner From Raffles
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+I used frontend to make this app functionable. These technologies are listed below.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+For the frontend, I decided to use REACT. This library was set up to border core components with their state under each corresponding folder. For routing, I used react-router-dom that let me set up individual pages. I mainly used material UI to design the buttons and create cards that shows information for each participant in the raffle, as well as cards that showed the name of each raffle that was created, as well as the winner of those raffles. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I hope you all enjoy the app. Feel free to reach out for any questions, comments or concerns!
